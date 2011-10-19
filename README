@@ -1,0 +1,38 @@
+NAME
+    Parse::Number::EN - Pattern to match number
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     use Parse::Number::EN qw($Pat);
+
+     my @a = map {/^$Pat$/ ? 1:0}
+         ("12,345.67", "-1.2e3", "x123", "1,23");
+     # @a = (1, 1, 0, 0)
+
+DESCRIPTION
+    This module provides $Pat.
+
+VARIABLES
+    None are exported by default, but they are exportable.
+
+  $Pat (REGEX)
+    A regex for quickly matching/extracting number from text. It's not 100%
+    perfect (the extracted number might not be valid), but it's simple and
+    fast.
+
+SEE ALSO
+    Lingua::EN::Words2Nums
+
+    Other Parse::Number::* modules.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
