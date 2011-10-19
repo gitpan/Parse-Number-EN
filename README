@@ -2,17 +2,21 @@ NAME
     Parse::Number::EN - Pattern to match number
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
-     use Parse::Number::EN qw($Pat);
+     use Parse::Number::EN qw(parse_number_en $Pat);
 
-     my @a = map {/^$Pat$/ ? 1:0}
+     my @a = map {parse_number_id(text=>$_)}
+         ("12,345.67", "-1.2e3", "x123", "1.23", "1,23");
+     # @a = (12345.67, -1200, undef, 1.23, 1)
+
+     my @b = map {/^$Pat$/ ? 1:0}
          ("12,345.67", "-1.2e3", "x123", "1,23");
-     # @a = (1, 1, 0, 0)
+     # @b = (1, 1, 0, 0)
 
 DESCRIPTION
-    This module provides $Pat.
+    This module provides $Pat and parse_number_en().
 
 VARIABLES
     None are exported by default, but they are exportable.
@@ -21,6 +25,18 @@ VARIABLES
     A regex for quickly matching/extracting number from text. It's not 100%
     perfect (the extracted number might not be valid), but it's simple and
     fast.
+
+FUNCTIONS
+    None are exported by default, but they are exportable.
+
+  parse_number_en(%args) -> RESULT
+    Parse number from English text.
+
+    Arguments ("*" denotes required arguments):
+
+    *   text* => *str*
+
+        The input text that contains number.
 
 SEE ALSO
     Lingua::EN::Words2Nums

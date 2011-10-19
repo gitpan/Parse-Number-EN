@@ -17,12 +17,13 @@ my %module_build_args = (
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
   "dist_name" => "Parse-Number-EN",
-  "dist_version" => "0.01",
+  "dist_version" => "0.02",
   "license" => "perl",
   "module_name" => "Parse::Number::EN",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
+    "Exporter::Lite" => 0,
     "Sub::Spec" => "1.0.2",
     "Test::More" => "0.96",
     "perl" => "5.010000"
