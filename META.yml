@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -15,10 +15,9 @@ meta-spec:
 name: Parse-Number-EN
 requires:
   Exporter::Lite: 0
-  Sub::Spec: 1.0.2
   Test::More: 0.96
   perl: 5.010000
 resources:
   homepage: http://search.cpan.org/dist/Parse-Number-EN/
   repository: http://github.com/sharyanto/Parse-Number-EN
-version: 0.02
+version: 0.03

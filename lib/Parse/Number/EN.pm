@@ -6,7 +6,7 @@ use 5.010;
 use strict;
 use warnings;
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 use Exporter::Lite;
 our @EXPORT_OK = qw($Pat parse_number_en);
@@ -53,7 +53,7 @@ Parse::Number::EN - Pattern to match number
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -84,12 +84,20 @@ A regex for quickly matching/extracting number from text. It's not 100% perfect
 
 None are exported by default, but they are exportable.
 
-=head2 parse_number_en(%args) -> RESULT
+=head1 SEE ALSO
 
+L<Lingua::EN::Words2Nums>
+
+Other Parse::Number::* modules.
+
+=head1 FUNCTIONS
+
+
+=head2 parse_number_en(%args) -> [status, msg, result, meta]
 
 Parse number from English text.
 
-Arguments (C<*> denotes required arguments):
+Arguments ('*' denotes required arguments):
 
 =over 4
 
@@ -99,11 +107,9 @@ The input text that contains number.
 
 =back
 
-=head1 SEE ALSO
+Return value:
 
-L<Lingua::EN::Words2Nums>
-
-Other Parse::Number::* modules.
+Returns an enveloped result (an array). First element (status) is an integer containing HTTP status code (200 means OK, 4xx caller error, 5xx function error). Second element (msg) is a string containing error message, or 'OK' if status is 200. Third element (result) is optional, the actual result. Fourth element (meta) is called result metadata and is optional, a hash that contains extra information.
 
 =head1 AUTHOR
 
@@ -111,7 +117,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
