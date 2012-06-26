@@ -2,7 +2,7 @@ NAME
     Parse::Number::EN - Pattern to match number
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
      use Parse::Number::EN qw(parse_number_en $Pat);
@@ -26,15 +26,17 @@ VARIABLES
     perfect (the extracted number might not be valid), but it's simple and
     fast.
 
-FUNCTIONS
-    None are exported by default, but they are exportable.
-
 SEE ALSO
     Lingua::EN::Words2Nums
 
     Other Parse::Number::* modules.
 
+DESCRIPTION
+    This module has Rinci metadata.
+
 FUNCTIONS
+    None are exported by default, but they are exportable.
+
   parse_number_en(%args) -> [status, msg, result, meta]
     Parse number from English text.
 

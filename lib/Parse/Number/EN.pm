@@ -6,7 +6,7 @@ use 5.010;
 use strict;
 use warnings;
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 use Exporter::Lite;
 our @EXPORT_OK = qw($Pat parse_number_en);
@@ -23,11 +23,15 @@ our $Pat = qr/(?:
               )/x;
 
 $SPEC{parse_number_en} = {
+    v => 1.1,
     summary => 'Parse number from English text',
     args    => {
-        text => ['str*' => {
+        text => {
             summary => 'The input text that contains number',
-        }],
+            schema => 'str*',
+            req => 1,
+            pos => 0,
+        },
     },
     result_naked => 1,
 };
@@ -53,7 +57,7 @@ Parse::Number::EN - Pattern to match number
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -80,18 +84,21 @@ None are exported by default, but they are exportable.
 A regex for quickly matching/extracting number from text. It's not 100% perfect
 (the extracted number might not be valid), but it's simple and fast.
 
-=head1 FUNCTIONS
-
-None are exported by default, but they are exportable.
-
 =head1 SEE ALSO
 
 L<Lingua::EN::Words2Nums>
 
 Other Parse::Number::* modules.
 
+=head1 DESCRIPTION
+
+
+This module has L<Rinci> metadata.
+
 =head1 FUNCTIONS
 
+
+None are exported by default, but they are exportable.
 
 =head2 parse_number_en(%args) -> [status, msg, result, meta]
 
