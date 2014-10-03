@@ -1,22 +1,30 @@
 Revision history for Parse-Number-EN
 
-0.04    2012-06-26
+0.05    2014-10-03 (PERLANCAR)
 
-        No functional changes. Tweak Rinci metadata.
+        - No functional changes.
 
-
-0.03    2012-03-23
-
-        No functional changes. Remove dependency to old module Sub::Spec.
+        - Produce non /x version of regex string instead of /x regexp object in
+          $Pat.
 
 
-0.02    2011-10-18
+0.04    2012-06-26 (SHARYANTO)
+
+        - No functional changes. Tweak Rinci metadata.
+
+
+0.03    2012-03-23 (SHARYANTO)
+
+        - No functional changes. Remove dependency to old module Sub::Spec.
+
+
+0.02    2011-10-18 (SHARYANTO)
 
         - Add parse_number_en().
 
         - Some fixes.
 
 
-0.01    2011-10-17
+0.01    2011-10-17 (SHARYANTO)
 
-        First release.
+        - First release.
